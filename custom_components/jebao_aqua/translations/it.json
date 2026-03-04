@@ -36,9 +36,6 @@
       "already_configured": "Questo account è già configurato",
       "no_devices": "Nessun dispositivo disponibile per la configurazione",
       "device_index_error": "Errore nell'accesso alle informazioni del dispositivo"
-    },
-    "success": {
-      "discovery_complete": "Tutti i dispositivi sono stati rilevati con successo."
     }
   },
   "options": {

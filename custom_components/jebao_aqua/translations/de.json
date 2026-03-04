@@ -36,9 +36,6 @@
       "already_configured": "Dieses Konto ist bereits konfiguriert",
       "no_devices": "Keine Geräte zur Einrichtung verfügbar",
       "device_index_error": "Fehler beim Zugriff auf Geräteinformationen"
-    },
-    "success": {
-      "discovery_complete": "Alle Geräte wurden erfolgreich erkannt."
     }
   },
   "options": {
