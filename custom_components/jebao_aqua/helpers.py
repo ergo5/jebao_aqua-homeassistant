@@ -207,6 +207,7 @@ ENUM_TRANSLATIONS: dict[str, str] = {
     "关": "Off",
     "正转": "Forward",
     "反转": "Reverse",
+    # MDP Pump
     "停机": "Stopped",
     "自动": "Auto",
     "喂食": "Feed",
