@@ -1,14 +1,14 @@
 {
-    "name": "蓝牙简易水族灯",
+    "name": "Bluetooth Simple Aquarium Light",
     "packetVersion": "0x00000004",
     "protocolType": "var_len",
     "product_key": "035d465e0531422195bab05bd478cd03",
     "entities": [
         {
-            "display_name": "机智云开发套件",
+            "display_name": "Gizwits Development Kit",
             "attrs": [
                 {
-                    "display_name": "开机/关机",
+                    "display_name": "Power On/Off",
                     "name": "SwitchON",
                     "data_type": "bool",
                     "position": {
@@ -19,10 +19,10 @@
                     },
                     "type": "status_writable",
                     "id": 0,
-                    "desc": "开/关机按钮"
+                    "desc": "On/Off button"
                 },
                 {
-                    "display_name": "模式",
+                    "display_name": "Mode",
                     "name": "Mode",
                     "data_type": "bool",
                     "position": {
@@ -33,10 +33,10 @@
                     },
                     "type": "status_writable",
                     "id": 1,
-                    "desc": "模式切换，0:AP控制，1：Wireless控制"
+                    "desc": "Mode switching, 0:AP control, 1:Wireless control"
                 },
                 {
-                    "display_name": "喂食开关",
+                    "display_name": "Feeding Switch",
                     "name": "FeedSwitch",
                     "data_type": "bool",
                     "position": {
@@ -47,10 +47,10 @@
                     },
                     "type": "status_writable",
                     "id": 2,
-                    "desc": "喂食开关"
+                    "desc": "Feeding switch"
                 },
                 {
-                    "display_name": "电机过流",
+                    "display_name": "Motor Overcurrent",
                     "name": "Fault_Overcurrent",
                     "data_type": "bool",
                     "position": {
@@ -61,10 +61,10 @@
                     },
                     "type": "fault",
                     "id": 3,
-                    "desc": "电机电流过大，包括短路故障"
+                    "desc": "Motor current too high, including short circuit fault"
                 },
                 {
-                    "display_name": "电机过压",
+                    "display_name": "Motor Overvoltage",
                     "name": "Fault_Overvoltage",
                     "data_type": "bool",
                     "position": {
@@ -75,10 +75,10 @@
                     },
                     "type": "fault",
                     "id": 4,
-                    "desc": "电机过压"
+                    "desc": "Motor overvoltage"
                 },
                 {
-                    "display_name": "温度过高",
+                    "display_name": "Over Temperature",
                     "name": "Fault_OverTemp",
                     "data_type": "bool",
                     "position": {
@@ -89,10 +89,10 @@
                     },
                     "type": "fault",
                     "id": 5,
-                    "desc": "电机温度过高"
+                    "desc": "Motor temperature too high"
                 },
                 {
-                    "display_name": "电机欠压",
+                    "display_name": "Motor Undervoltage",
                     "name": "Fault_Undervoltage",
                     "data_type": "bool",
                     "position": {
@@ -103,10 +103,10 @@
                     },
                     "type": "fault",
                     "id": 6,
-                    "desc": "电机欠压"
+                    "desc": "Motor undervoltage"
                 },
                 {
-                    "display_name": "电机堵转",
+                    "display_name": "Motor Locked Rotor",
                     "name": "Fault_Lockedrotor",
                     "data_type": "bool",
                     "position": {
@@ -117,10 +117,10 @@
                     },
                     "type": "fault",
                     "id": 7,
-                    "desc": "电机堵转"
+                    "desc": "Motor locked rotor"
                 },
                 {
-                    "display_name": "空载",
+                    "display_name": "No Load",
                     "name": "Fault_no_liveload",
                     "data_type": "bool",
                     "position": {
@@ -131,10 +131,10 @@
                     },
                     "type": "fault",
                     "id": 8,
-                    "desc": "空载"
+                    "desc": "No load"
                 },
                 {
-                    "display_name": "串口连接故障",
+                    "display_name": "UART Connection Fault",
                     "name": "Fault_UART",
                     "data_type": "bool",
                     "position": {
@@ -145,10 +145,10 @@
                     },
                     "type": "fault",
                     "id": 9,
-                    "desc": "模块与主板连接不上"
+                    "desc": "Module cannot connect to mainboard"
                 },
                 {
-                    "display_name": "定时开关",
+                    "display_name": "Timer Switch",
                     "name": "TimerON",
                     "data_type": "bool",
                     "position": {
@@ -159,16 +159,16 @@
                     },
                     "type": "status_writable",
                     "id": 10,
-                    "desc": "0:定时关闭，1：定时打开"
+                    "desc": "0:Timer off, 1:Timer on"
                 },
                 {
-                    "display_name": "当前定时模式",
+                    "display_name": "Current Timer Mode",
                     "name": "AutoMode",
                     "data_type": "enum",
                     "enum": [
-                        "停机",
-                        "自动",
-                        "喂食"
+                        "Shutdown",
+                        "Auto",
+                        "Feeding"
                     ],
                     "position": {
                         "byte_offset": 0,
@@ -178,10 +178,10 @@
                     },
                     "type": "status_writable",
                     "id": 11,
-                    "desc": "当前定时模式：0:停机;1:自动；2:喂食"
+                    "desc": "Current timer mode: 0:Shutdown;1:Auto;2:Feeding"
                 },
                 {
-                    "display_name": "设定电机转速",
+                    "display_name": "Set Motor Speed",
                     "name": "Motor_Speed",
                     "data_type": "uint8",
                     "position": {
@@ -198,10 +198,10 @@
                     },
                     "type": "status_writable",
                     "id": 12,
-                    "desc": "电机档位，范围是30~100,为0时电机停机"
+                    "desc": "Motor gear, range 30~100, motor stops when 0"
                 },
                 {
-                    "display_name": "喂食时长",
+                    "display_name": "Feeding Duration",
                     "name": "FeedTime",
                     "data_type": "uint8",
                     "position": {
@@ -218,10 +218,10 @@
                     },
                     "type": "status_writable",
                     "id": 13,
-                    "desc": "喂食时长"
+                    "desc": "Feeding duration"
                 },
                 {
-                    "display_name": "当前定时档位",
+                    "display_name": "Current Timer Gear",
                     "name": "AutoGears",
                     "data_type": "uint8",
                     "position": {
@@ -238,10 +238,10 @@
                     },
                     "type": "status_writable",
                     "id": 14,
-                    "desc": "当前定时档位"
+                    "desc": "Current timer gear"
                 },
                 {
-                    "display_name": "当前定时喂食时间",
+                    "display_name": "Current Timer Feeding Time",
                     "name": "AutoFeedTime",
                     "data_type": "uint8",
                     "position": {
@@ -258,10 +258,10 @@
                     },
                     "type": "status_writable",
                     "id": 15,
-                    "desc": "当前定时喂食时间"
+                    "desc": "Current timer feeding time"
                 },
                 {
-                    "display_name": "日期数据",
+                    "display_name": "Date Data",
                     "name": "YMDData",
                     "data_type": "binary",
                     "position": {
@@ -272,10 +272,10 @@
                     },
                     "type": "status_writable",
                     "id": 16,
-                    "desc": "日期，Byte1年千位百位，byte2年十位个位，byte3月，byte4日"
+                    "desc": "Date, Byte1: thousands and hundreds of year, Byte2: tens of year, Byte3: month, Byte4: day"
                 },
                 {
-                    "display_name": "时间数据",
+                    "display_name": "Time Data",
                     "name": "HMSData",
                     "data_type": "binary",
                     "position": {
@@ -286,10 +286,10 @@
                     },
                     "type": "status_writable",
                     "id": 17,
-                    "desc": "时间，Byte1空，byte2时，byte3分，byte4秒"
+                    "desc": "Time, Byte1: Empty, Byte2: Hour, Byte3: Minute, Byte4: Second"
                 },
                 {
-                    "display_name": "自动时间点00",
+                    "display_name": "Auto Time Point 00",
                     "name": "AutoTime00",
                     "data_type": "binary",
                     "position": {
@@ -300,10 +300,10 @@
                     },
                     "type": "status_writable",
                     "id": 18,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点01",
+                    "display_name": "Auto Time Point 01",
                     "name": "AutoTime01",
                     "data_type": "binary",
                     "position": {
@@ -314,10 +314,10 @@
                     },
                     "type": "status_writable",
                     "id": 19,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点02",
+                    "display_name": "Auto Time Point 02",
                     "name": "AutoTime02",
                     "data_type": "binary",
                     "position": {
@@ -328,10 +328,10 @@
                     },
                     "type": "status_writable",
                     "id": 20,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点03",
+                    "display_name": "Auto Time Point 03",
                     "name": "AutoTime03",
                     "data_type": "binary",
                     "position": {
@@ -342,10 +342,10 @@
                     },
                     "type": "status_writable",
                     "id": 21,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点04",
+                    "display_name": "Auto Time Point 04",
                     "name": "AutoTime04",
                     "data_type": "binary",
                     "position": {
@@ -356,10 +356,10 @@
                     },
                     "type": "status_writable",
                     "id": 22,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点05",
+                    "display_name": "AutoTime05",
                     "name": "AutoTime05",
                     "data_type": "binary",
                     "position": {
@@ -370,10 +370,10 @@
                     },
                     "type": "status_writable",
                     "id": 23,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点06",
+                    "display_name": "AutoTIme06",
                     "name": "AutoTime06",
                     "data_type": "binary",
                     "position": {
@@ -384,10 +384,10 @@
                     },
                     "type": "status_writable",
                     "id": 24,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点07",
+                    "display_name": "AutoTIme07",
                     "name": "AutoTime07",
                     "data_type": "binary",
                     "position": {
@@ -398,10 +398,10 @@
                     },
                     "type": "status_writable",
                     "id": 25,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点08",
+                    "display_name": "AutoTIme08",
                     "name": "AutoTime08",
                     "data_type": "binary",
                     "position": {
@@ -412,10 +412,10 @@
                     },
                     "type": "status_writable",
                     "id": 26,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点09",
+                    "display_name": "AutoTIme09",
                     "name": "AutoTime09",
                     "data_type": "binary",
                     "position": {
@@ -426,10 +426,10 @@
                     },
                     "type": "status_writable",
                     "id": 27,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点10",
+                    "display_name": "AutoTIme10",
                     "name": "AutoTime10",
                     "data_type": "binary",
                     "position": {
@@ -440,10 +440,10 @@
                     },
                     "type": "status_writable",
                     "id": 28,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点11",
+                    "display_name": "AutoTIme11",
                     "name": "AutoTime11",
                     "data_type": "binary",
                     "position": {
@@ -454,10 +454,10 @@
                     },
                     "type": "status_writable",
                     "id": 29,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点12",
+                    "display_name": "AutoTIme12",
                     "name": "AutoTime12",
                     "data_type": "binary",
                     "position": {
@@ -468,10 +468,10 @@
                     },
                     "type": "status_writable",
                     "id": 30,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点13",
+                    "display_name": "AutoTIme13",
                     "name": "AutoTime13",
                     "data_type": "binary",
                     "position": {
@@ -482,10 +482,10 @@
                     },
                     "type": "status_writable",
                     "id": 31,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点14",
+                    "display_name": "AutoTIme14",
                     "name": "AutoTime14",
                     "data_type": "binary",
                     "position": {
@@ -496,10 +496,10 @@
                     },
                     "type": "status_writable",
                     "id": 32,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点15",
+                    "display_name": "AutoTIme15",
                     "name": "AutoTime15",
                     "data_type": "binary",
                     "position": {
@@ -510,10 +510,10 @@
                     },
                     "type": "status_writable",
                     "id": 33,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点16",
+                    "display_name": "AutoTIme16",
                     "name": "AutoTime16",
                     "data_type": "binary",
                     "position": {
@@ -524,10 +524,10 @@
                     },
                     "type": "status_writable",
                     "id": 34,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点17",
+                    "display_name": "AutoTIme17",
                     "name": "AutoTime17",
                     "data_type": "binary",
                     "position": {
@@ -538,10 +538,10 @@
                     },
                     "type": "status_writable",
                     "id": 35,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点18",
+                    "display_name": "AutoTIme18",
                     "name": "AutoTime18",
                     "data_type": "binary",
                     "position": {
@@ -552,10 +552,10 @@
                     },
                     "type": "status_writable",
                     "id": 36,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点19",
+                    "display_name": "AutoTIme19",
                     "name": "AutoTime19",
                     "data_type": "binary",
                     "position": {
@@ -566,10 +566,10 @@
                     },
                     "type": "status_writable",
                     "id": 37,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点20",
+                    "display_name": "AutoTIme20",
                     "name": "AutoTime20",
                     "data_type": "binary",
                     "position": {
@@ -580,10 +580,10 @@
                     },
                     "type": "status_writable",
                     "id": 38,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点21",
+                    "display_name": "AutoTIme21",
                     "name": "AutoTime21",
                     "data_type": "binary",
                     "position": {
@@ -594,10 +594,10 @@
                     },
                     "type": "status_writable",
                     "id": 39,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点22",
+                    "display_name": "AutoTIme22",
                     "name": "AutoTime22",
                     "data_type": "binary",
                     "position": {
@@ -608,10 +608,10 @@
                     },
                     "type": "status_writable",
                     "id": 40,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点23",
+                    "display_name": "AutoTIme23",
                     "name": "AutoTime23",
                     "data_type": "binary",
                     "position": {
@@ -622,10 +622,10 @@
                     },
                     "type": "status_writable",
                     "id": 41,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点24",
+                    "display_name": "AutoTIme24",
                     "name": "AutoTime24",
                     "data_type": "binary",
                     "position": {
@@ -636,10 +636,10 @@
                     },
                     "type": "status_writable",
                     "id": 42,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点25",
+                    "display_name": "AutoTIme25",
                     "name": "AutoTime25",
                     "data_type": "binary",
                     "position": {
@@ -650,10 +650,10 @@
                     },
                     "type": "status_writable",
                     "id": 43,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点26",
+                    "display_name": "AutoTIme26",
                     "name": "AutoTime26",
                     "data_type": "binary",
                     "position": {
@@ -664,10 +664,10 @@
                     },
                     "type": "status_writable",
                     "id": 44,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点27",
+                    "display_name": "AutoTIme27",
                     "name": "AutoTime27",
                     "data_type": "binary",
                     "position": {
@@ -678,10 +678,10 @@
                     },
                     "type": "status_writable",
                     "id": 45,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点28",
+                    "display_name": "AutoTIme28",
                     "name": "AutoTime28",
                     "data_type": "binary",
                     "position": {
@@ -692,10 +692,10 @@
                     },
                     "type": "status_writable",
                     "id": 46,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点29",
+                    "display_name": "AutoTIme29",
                     "name": "AutoTime29",
                     "data_type": "binary",
                     "position": {
@@ -706,10 +706,10 @@
                     },
                     "type": "status_writable",
                     "id": 47,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点30",
+                    "display_name": "AutoTIme30",
                     "name": "AutoTime30",
                     "data_type": "binary",
                     "position": {
@@ -720,10 +720,10 @@
                     },
                     "type": "status_writable",
                     "id": 48,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点31",
+                    "display_name": "AutoTIme31",
                     "name": "AutoTime31",
                     "data_type": "binary",
                     "position": {
@@ -734,10 +734,10 @@
                     },
                     "type": "status_writable",
                     "id": 49,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点32",
+                    "display_name": "AutoTIme32",
                     "name": "AutoTime32",
                     "data_type": "binary",
                     "position": {
@@ -748,10 +748,10 @@
                     },
                     "type": "status_writable",
                     "id": 50,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点33",
+                    "display_name": "AutoTIme33",
                     "name": "AutoTime33",
                     "data_type": "binary",
                     "position": {
@@ -762,10 +762,10 @@
                     },
                     "type": "status_writable",
                     "id": 51,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点34",
+                    "display_name": "AutoTIme34",
                     "name": "AutoTime34",
                     "data_type": "binary",
                     "position": {
@@ -776,10 +776,10 @@
                     },
                     "type": "status_writable",
                     "id": 52,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点35",
+                    "display_name": "AutoTIme35",
                     "name": "AutoTime35",
                     "data_type": "binary",
                     "position": {
@@ -790,10 +790,10 @@
                     },
                     "type": "status_writable",
                     "id": 53,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点36",
+                    "display_name": "AutoTIme36",
                     "name": "AutoTime36",
                     "data_type": "binary",
                     "position": {
@@ -804,10 +804,10 @@
                     },
                     "type": "status_writable",
                     "id": 54,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点37",
+                    "display_name": "AutoTIme37",
                     "name": "AutoTime37",
                     "data_type": "binary",
                     "position": {
@@ -818,10 +818,10 @@
                     },
                     "type": "status_writable",
                     "id": 55,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点38",
+                    "display_name": "AutoTIme38",
                     "name": "AutoTime38",
                     "data_type": "binary",
                     "position": {
@@ -832,10 +832,10 @@
                     },
                     "type": "status_writable",
                     "id": 56,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点39",
+                    "display_name": "AutoTIme39",
                     "name": "AutoTime39",
                     "data_type": "binary",
                     "position": {
@@ -846,10 +846,10 @@
                     },
                     "type": "status_writable",
                     "id": 57,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点40",
+                    "display_name": "AutoTIme40",
                     "name": "AutoTime40",
                     "data_type": "binary",
                     "position": {
@@ -860,10 +860,10 @@
                     },
                     "type": "status_writable",
                     "id": 58,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点41",
+                    "display_name": "AutoTIme41",
                     "name": "AutoTime41",
                     "data_type": "binary",
                     "position": {
@@ -874,10 +874,10 @@
                     },
                     "type": "status_writable",
                     "id": 59,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点42",
+                    "display_name": "AutoTIme42",
                     "name": "AutoTime42",
                     "data_type": "binary",
                     "position": {
@@ -888,10 +888,10 @@
                     },
                     "type": "status_writable",
                     "id": 60,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点43",
+                    "display_name": "AutoTIme43",
                     "name": "AutoTime43",
                     "data_type": "binary",
                     "position": {
@@ -902,10 +902,10 @@
                     },
                     "type": "status_writable",
                     "id": 61,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点44",
+                    "display_name": "AutoTIme44",
                     "name": "AutoTime44",
                     "data_type": "binary",
                     "position": {
@@ -916,10 +916,10 @@
                     },
                     "type": "status_writable",
                     "id": 62,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点45",
+                    "display_name": "AutoTIme45",
                     "name": "AutoTime45",
                     "data_type": "binary",
                     "position": {
@@ -930,10 +930,10 @@
                     },
                     "type": "status_writable",
                     "id": 63,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点46",
+                    "display_name": "AutoTIme46",
                     "name": "AutoTime46",
                     "data_type": "binary",
                     "position": {
@@ -944,10 +944,10 @@
                     },
                     "type": "status_writable",
                     "id": 64,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 },
                 {
-                    "display_name": "自动时间点47",
+                    "display_name": "AutoTIme47",
                     "name": "AutoTime47",
                     "data_type": "binary",
                     "position": {
@@ -958,7 +958,7 @@
                     },
                     "type": "status_writable",
                     "id": 65,
-                    "desc": "Byte0：开始时，Byte1：开始分,Byte2:结束时，Byte3:结束分，Byte4：模式,0停机，1自动，2喂食，Byte5：档位/暂停时间,停机时档位=0"
+                    "desc": "Byte0: Start Hour, Byte1: Start Minute, Byte2: End Hour, Byte3: End Minute, Byte4: Mode, 0: Stop, 1: Automatic, 2: Feeding, Byte5: Pause Time Level = 0"
                 }
             ],
             "name": "entity0",
@@ -984,7 +984,7 @@
                         },
                         "type": "QBooleanElement",
                         "key": "entity0.SwitchON",
-                        "title": "开机/关机"
+                        "title": "Power On/Off"
                     },
                     {
                         "boolValue": false,
@@ -997,7 +997,7 @@
                         },
                         "type": "QBooleanElement",
                         "key": "entity0.Mode",
-                        "title": "模式"
+                        "title": "Mode"
                     },
                     {
                         "boolValue": false,
@@ -1010,7 +1010,7 @@
                         },
                         "type": "QBooleanElement",
                         "key": "entity0.FeedSwitch",
-                        "title": "喂食开关"
+                        "title": "Feeding Switch"
                     },
                     {
                         "boolValue": false,
@@ -1023,13 +1023,13 @@
                         },
                         "type": "QBooleanElement",
                         "key": "entity0.TimerON",
-                        "title": "定时开关"
+                        "title": "Timer Switch"
                     },
                     {
                         "items": [
-                            "停机",
-                            "自动",
-                            "喂食"
+                            "Shutdown",
+                            "Auto",
+                            "Feeding"
                         ],
                         "object": {
                             "action": "entity0",
@@ -1040,10 +1040,10 @@
                         },
                         "type": "QRadioElement",
                         "key": "entity0.AutoMode",
-                        "title": "当前定时模式"
+                        "title": "Current Timer Mode"
                     },
                     {
-                        "title": "设定电机转速",
+                        "title": "Set Motor Speed",
                         "bind": "floatValue:float",
                         "object": {
                             "action": "entity0",
@@ -1064,7 +1064,7 @@
                         "type": "QFloatElement"
                     },
                     {
-                        "title": "喂食时长",
+                        "title": "Feeding Duration",
                         "bind": "floatValue:float",
                         "object": {
                             "action": "entity0",
@@ -1085,7 +1085,7 @@
                         "type": "QFloatElement"
                     },
                     {
-                        "title": "当前定时档位",
+                        "title": "Current Timer Gear",
                         "bind": "floatValue:float",
                         "object": {
                             "action": "entity0",
@@ -1106,7 +1106,7 @@
                         "type": "QFloatElement"
                     },
                     {
-                        "title": "当前定时喂食时间",
+                        "title": "Current Timer Feeding Time",
                         "bind": "floatValue:float",
                         "object": {
                             "action": "entity0",
@@ -1128,7 +1128,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "日期数据",
+                        "title": "Date Data",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1143,7 +1143,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "时间数据",
+                        "title": "Time Data",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1158,7 +1158,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点00",
+                        "title": "Auto Time Point 00",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1173,7 +1173,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点01",
+                        "title": "Auto Time Point 01",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1188,7 +1188,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点02",
+                        "title": "Auto Time Point 02",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1203,7 +1203,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点03",
+                        "title": "AutoTIme03",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1218,7 +1218,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点04",
+                        "title": "AutoTIme04",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1233,7 +1233,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点05",
+                        "title": "AutoTIme05",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1248,7 +1248,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点06",
+                        "title": "AutoTIme06",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1263,7 +1263,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点07",
+                        "title": "AutoTIme07",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1278,7 +1278,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点08",
+                        "title": "AutoTIme08",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1293,7 +1293,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点09",
+                        "title": "AutoTIme09",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1308,7 +1308,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点10",
+                        "title": "AutoTIme10",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1323,7 +1323,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点11",
+                        "title": "AutoTIme11",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1338,7 +1338,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点12",
+                        "title": "AutoTIme12",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1353,7 +1353,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点13",
+                        "title": "AutoTIme13",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1368,7 +1368,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点14",
+                        "title": "AutoTIme14",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1383,7 +1383,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点15",
+                        "title": "AutoTIme15",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1398,7 +1398,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点16",
+                        "title": "AutoTIme16",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1413,7 +1413,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点17",
+                        "title": "AutoTIme17",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1428,7 +1428,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点18",
+                        "title": "AutoTIme18",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1443,7 +1443,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点19",
+                        "title": "AutoTIme19",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1458,7 +1458,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点20",
+                        "title": "AutoTIme20",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1473,7 +1473,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点21",
+                        "title": "AutoTIme21",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1488,7 +1488,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点22",
+                        "title": "AutoTIme22",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1503,7 +1503,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点23",
+                        "title": "AutoTIme23",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1518,7 +1518,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点24",
+                        "title": "AutoTIme24",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1533,7 +1533,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点25",
+                        "title": "AutoTIme25",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1548,7 +1548,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点26",
+                        "title": "AutoTIme26",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1563,7 +1563,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点27",
+                        "title": "AutoTIme27",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1578,7 +1578,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点28",
+                        "title": "AutoTIme28",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1593,7 +1593,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点29",
+                        "title": "AutoTIme29",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1608,7 +1608,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点30",
+                        "title": "AutoTIme30",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1623,7 +1623,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点31",
+                        "title": "AutoTIme31",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1638,7 +1638,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点32",
+                        "title": "AutoTIme32",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1653,7 +1653,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点33",
+                        "title": "AutoTIme33",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1668,7 +1668,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点34",
+                        "title": "AutoTIme34",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1683,7 +1683,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点35",
+                        "title": "AutoTIme35",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1698,7 +1698,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点36",
+                        "title": "AutoTIme36",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1713,7 +1713,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点37",
+                        "title": "AutoTIme37",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1728,7 +1728,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点38",
+                        "title": "AutoTIme38",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1743,7 +1743,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点39",
+                        "title": "AutoTIme39",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1758,7 +1758,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点40",
+                        "title": "AutoTIme40",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1773,7 +1773,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点41",
+                        "title": "AutoTIme41",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1788,7 +1788,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点42",
+                        "title": "AutoTIme42",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1803,7 +1803,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点43",
+                        "title": "AutoTIme43",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1818,7 +1818,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点44",
+                        "title": "AutoTIme44",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1833,7 +1833,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点45",
+                        "title": "AutoTIme45",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1848,7 +1848,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点46",
+                        "title": "AutoTIme46",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1863,7 +1863,7 @@
                     },
                     {
                         "keyboardType": "NumbersAndPunctuation",
-                        "title": "自动时间点47",
+                        "title": "AutoTIme47",
                         "object": {
                             "action": "entity0",
                             "bind": [
@@ -1881,3 +1881,10 @@
         ]
     }
 }
+
+
+
+
+
+
+
